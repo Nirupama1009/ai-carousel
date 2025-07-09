@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Generated Carousel Slides</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fafafa;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .swiper {
+      width: 80%;
+      max-width: 600px;
+      aspect-ratio: 4 / 5;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 30px;
+      font-size: 20px;
+      font-weight: 500;
+      color: #111;
+      text-align: center;
+      line-height: 1.5;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      box-sizing: border-box;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: #555;
+    }
+
+    .swiper-pagination-bullet {
+      background: #999;
+    }
+
+    a {
+      margin-top: 20px;
+      text-decoration: none;
+      color: #007BFF;
+    }
+
+    .download-link {
+      margin-top: 10px;
+      color: #007BFF;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h2>📲 Your Instagram Carousel Slides</h2>
+
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      {% for slide in slides %}
+      <div class="swiper-slide">
+        {{ slide }}
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Navigation -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  {% if filename %}
+    <a class="download-link" href="/download/{{ filename }}">📥 Download as PDF</a>
+  {% endif %}
+
+  <a href="/">🔙 Back</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+    new Swiper('.swiper', {
+      loop: false,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>

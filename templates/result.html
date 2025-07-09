@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slides</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/static/styles.css">
+    <style>
+        .swiper {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+        .swiper-slide {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            font-size: 1.1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Your Blog as Slides</h2>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                {% for slide in slides %}
+                    <div class="swiper-slide">{{ slide }}</div>
+                {% endfor %}
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
