@@ -90,6 +90,8 @@ ai_carousel/
 
 - [ ] Chrome Extension for blog import
 
+# sample screenshots :
+
 <img width="1920" height="1080" alt="Screenshot 2025-07-11 210956" src="https://github.com/user-attachments/assets/ba8a30de-51c9-4745-b7b4-5ac4e344e781" />
 <img width="1920" height="1080" alt="Screenshot 2025-07-11 211113" src="https://github.com/user-attachments/assets/c3049061-78d0-48de-8d6c-c3eb835f5954" />
 <img width="1920" height="1080" alt="Screenshot 2025-07-11 211134" src="https://github.com/user-attachments/assets/c1fee4de-ed91-4938-9922-c76a4ef32b24" />
